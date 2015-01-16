@@ -43,8 +43,10 @@ group :development, :test do
   gem 'spring'
   gem 'rspec'
   gem 'rspec-rails'
+
+  gem 'pry'
 end
 
 gem 'protected_attributes', '~>1.0.1'
 gem "therubyracer"
-gem "audited-activerecord", "~> 4.0"
+gem "audited-activerecord", :github => 'collectiveidea/audited'

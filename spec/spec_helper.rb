@@ -83,3 +83,10 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+def with_strict_sanitizer
+  ActiveRecord::Base.mass_assignment_sanitizer = :strict
+  yield
+ensure
+  ActiveRecord::Base.mass_assignment_sanitizer = :logger
+end

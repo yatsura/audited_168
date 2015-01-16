@@ -7,7 +7,7 @@ RSpec.describe ModelWithProtectedAttr, :type => :model do
     }.to change(ModelWithProtectedAttr, :count).by(1)
   end
 
-  it "can save with strict sanitizer" do
+  it "can save with strict sanitizer", :focus => true do
     expect {
       with_strict_sanitizer do
         ModelWithProtectedAttr.create
